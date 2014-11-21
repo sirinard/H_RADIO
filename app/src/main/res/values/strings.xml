@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HRadio</string>
+    <string name="app_displayname">H RADIO</string>
+    <string name="app_version">3.5</string>
+    <string name="app_id">52</string>
+    <string name="springboard_id">130</string>
+
+    <string name="exit_alert">ต้องการออกจากโปรแกรม ?</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+
+</resources>

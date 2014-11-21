@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'http://widget.truelife.com/test/libs/android/maven' }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'http://widget.truelife.com/test/libs/android/maven' }
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.truelife.mobile.android.hradio"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:21.0.0'
+    compile 'com.truelife:Library_AccessBlocking:3.1+'
+    compile 'com.truelife:TruelifeView-Common:1.1.+'
+    compile 'com.truelife:Library_TMStreaming:2.2+'
+    compile 'com.google.android.gms:play-services:5.0.89'
+}
